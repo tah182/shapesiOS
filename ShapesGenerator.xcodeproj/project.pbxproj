@@ -15,6 +15,7 @@
 		826A9C521A0C916D00AAA526 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826A9C511A0C916D00AAA526 /* Images.xcassets */; };
 		826A9C551A0C916D00AAA526 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826A9C531A0C916D00AAA526 /* LaunchScreen.xib */; };
 		826A9C611A0C916D00AAA526 /* ShapesGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A9C601A0C916D00AAA526 /* ShapesGeneratorTests.swift */; };
+		826A9C6D1A0C91B500AAA526 /* ShapeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 826A9C6C1A0C91B500AAA526 /* ShapeType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		826A9C5A1A0C916D00AAA526 /* ShapesGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapesGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		826A9C5F1A0C916D00AAA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826A9C601A0C916D00AAA526 /* ShapesGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesGeneratorTests.swift; sourceTree = "<group>"; };
+		826A9C6B1A0C91B500AAA526 /* ShapesGenerator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapesGenerator-Bridging-Header.h"; sourceTree = "<group>"; };
+		826A9C6C1A0C91B500AAA526 /* ShapeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 		826A9C381A0C916D00AAA526 = {
 			isa = PBXGroup;
 			children = (
+				826A9C6A1A0C919500AAA526 /* Objects */,
 				826A9C431A0C916D00AAA526 /* ShapesGenerator */,
 				826A9C5D1A0C916D00AAA526 /* ShapesGeneratorTests */,
 				826A9C421A0C916D00AAA526 /* Products */,
@@ -116,6 +120,15 @@
 				826A9C5F1A0C916D00AAA526 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		826A9C6A1A0C919500AAA526 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				826A9C6C1A0C91B500AAA526 /* ShapeType.m */,
+				826A9C6B1A0C91B500AAA526 /* ShapesGenerator-Bridging-Header.h */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				826A9C4D1A0C916D00AAA526 /* GameViewController.swift in Sources */,
+				826A9C6D1A0C91B500AAA526 /* ShapeType.m in Sources */,
 				826A9C471A0C916D00AAA526 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,9 +360,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ShapesGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShapesGenerator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -356,9 +373,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ShapesGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShapesGenerator-Bridging-Header.h";
 			};
 			name = Release;
 		};
