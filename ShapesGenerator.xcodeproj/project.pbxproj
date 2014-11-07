@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		826A9C471A0C916D00AAA526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A9C461A0C916D00AAA526 /* AppDelegate.swift */; };
+		826A9C491A0C916D00AAA526 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 826A9C481A0C916D00AAA526 /* Shader.fsh */; };
+		826A9C4B1A0C916D00AAA526 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 826A9C4A1A0C916D00AAA526 /* Shader.vsh */; };
+		826A9C4D1A0C916D00AAA526 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A9C4C1A0C916D00AAA526 /* GameViewController.swift */; };
+		826A9C501A0C916D00AAA526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826A9C4E1A0C916D00AAA526 /* Main.storyboard */; };
+		826A9C521A0C916D00AAA526 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 826A9C511A0C916D00AAA526 /* Images.xcassets */; };
+		826A9C551A0C916D00AAA526 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826A9C531A0C916D00AAA526 /* LaunchScreen.xib */; };
+		826A9C611A0C916D00AAA526 /* ShapesGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A9C601A0C916D00AAA526 /* ShapesGeneratorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		826A9C5B1A0C916D00AAA526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 826A9C391A0C916D00AAA526 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 826A9C401A0C916D00AAA526;
+			remoteInfo = ShapesGenerator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		826A9C411A0C916D00AAA526 /* ShapesGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapesGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		826A9C451A0C916D00AAA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826A9C461A0C916D00AAA526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		826A9C481A0C916D00AAA526 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		826A9C4A1A0C916D00AAA526 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		826A9C4C1A0C916D00AAA526 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		826A9C4F1A0C916D00AAA526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		826A9C511A0C916D00AAA526 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		826A9C541A0C916D00AAA526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		826A9C5A1A0C916D00AAA526 /* ShapesGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapesGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		826A9C5F1A0C916D00AAA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826A9C601A0C916D00AAA526 /* ShapesGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesGeneratorTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		826A9C3E1A0C916D00AAA526 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826A9C571A0C916D00AAA526 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		826A9C381A0C916D00AAA526 = {
+			isa = PBXGroup;
+			children = (
+				826A9C431A0C916D00AAA526 /* ShapesGenerator */,
+				826A9C5D1A0C916D00AAA526 /* ShapesGeneratorTests */,
+				826A9C421A0C916D00AAA526 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		826A9C421A0C916D00AAA526 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				826A9C411A0C916D00AAA526 /* ShapesGenerator.app */,
+				826A9C5A1A0C916D00AAA526 /* ShapesGeneratorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		826A9C431A0C916D00AAA526 /* ShapesGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				826A9C461A0C916D00AAA526 /* AppDelegate.swift */,
+				826A9C481A0C916D00AAA526 /* Shader.fsh */,
+				826A9C4A1A0C916D00AAA526 /* Shader.vsh */,
+				826A9C4C1A0C916D00AAA526 /* GameViewController.swift */,
+				826A9C4E1A0C916D00AAA526 /* Main.storyboard */,
+				826A9C511A0C916D00AAA526 /* Images.xcassets */,
+				826A9C531A0C916D00AAA526 /* LaunchScreen.xib */,
+				826A9C441A0C916D00AAA526 /* Supporting Files */,
+			);
+			path = ShapesGenerator;
+			sourceTree = "<group>";
+		};
+		826A9C441A0C916D00AAA526 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				826A9C451A0C916D00AAA526 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		826A9C5D1A0C916D00AAA526 /* ShapesGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				826A9C601A0C916D00AAA526 /* ShapesGeneratorTests.swift */,
+				826A9C5E1A0C916D00AAA526 /* Supporting Files */,
+			);
+			path = ShapesGeneratorTests;
+			sourceTree = "<group>";
+		};
+		826A9C5E1A0C916D00AAA526 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				826A9C5F1A0C916D00AAA526 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		826A9C401A0C916D00AAA526 /* ShapesGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 826A9C641A0C916D00AAA526 /* Build configuration list for PBXNativeTarget "ShapesGenerator" */;
+			buildPhases = (
+				826A9C3D1A0C916D00AAA526 /* Sources */,
+				826A9C3E1A0C916D00AAA526 /* Frameworks */,
+				826A9C3F1A0C916D00AAA526 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShapesGenerator;
+			productName = ShapesGenerator;
+			productReference = 826A9C411A0C916D00AAA526 /* ShapesGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		826A9C591A0C916D00AAA526 /* ShapesGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 826A9C671A0C916D00AAA526 /* Build configuration list for PBXNativeTarget "ShapesGeneratorTests" */;
+			buildPhases = (
+				826A9C561A0C916D00AAA526 /* Sources */,
+				826A9C571A0C916D00AAA526 /* Frameworks */,
+				826A9C581A0C916D00AAA526 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				826A9C5C1A0C916D00AAA526 /* PBXTargetDependency */,
+			);
+			name = ShapesGeneratorTests;
+			productName = ShapesGeneratorTests;
+			productReference = 826A9C5A1A0C916D00AAA526 /* ShapesGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		826A9C391A0C916D00AAA526 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Mad Hat Productions";
+				TargetAttributes = {
+					826A9C401A0C916D00AAA526 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					826A9C591A0C916D00AAA526 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 826A9C401A0C916D00AAA526;
+					};
+				};
+			};
+			buildConfigurationList = 826A9C3C1A0C916D00AAA526 /* Build configuration list for PBXProject "ShapesGenerator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 826A9C381A0C916D00AAA526;
+			productRefGroup = 826A9C421A0C916D00AAA526 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				826A9C401A0C916D00AAA526 /* ShapesGenerator */,
+				826A9C591A0C916D00AAA526 /* ShapesGeneratorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		826A9C3F1A0C916D00AAA526 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826A9C551A0C916D00AAA526 /* LaunchScreen.xib in Resources */,
+				826A9C501A0C916D00AAA526 /* Main.storyboard in Resources */,
+				826A9C521A0C916D00AAA526 /* Images.xcassets in Resources */,
+				826A9C4B1A0C916D00AAA526 /* Shader.vsh in Resources */,
+				826A9C491A0C916D00AAA526 /* Shader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826A9C581A0C916D00AAA526 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		826A9C3D1A0C916D00AAA526 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826A9C4D1A0C916D00AAA526 /* GameViewController.swift in Sources */,
+				826A9C471A0C916D00AAA526 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826A9C561A0C916D00AAA526 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				826A9C611A0C916D00AAA526 /* ShapesGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		826A9C5C1A0C916D00AAA526 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 826A9C401A0C916D00AAA526 /* ShapesGenerator */;
+			targetProxy = 826A9C5B1A0C916D00AAA526 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		826A9C4E1A0C916D00AAA526 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				826A9C4F1A0C916D00AAA526 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		826A9C531A0C916D00AAA526 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				826A9C541A0C916D00AAA526 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		826A9C621A0C916D00AAA526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		826A9C631A0C916D00AAA526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		826A9C651A0C916D00AAA526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShapesGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		826A9C661A0C916D00AAA526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShapesGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		826A9C681A0C916D00AAA526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShapesGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShapesGenerator.app/ShapesGenerator";
+			};
+			name = Debug;
+		};
+		826A9C691A0C916D00AAA526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShapesGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShapesGenerator.app/ShapesGenerator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		826A9C3C1A0C916D00AAA526 /* Build configuration list for PBXProject "ShapesGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826A9C621A0C916D00AAA526 /* Debug */,
+				826A9C631A0C916D00AAA526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		826A9C641A0C916D00AAA526 /* Build configuration list for PBXNativeTarget "ShapesGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826A9C651A0C916D00AAA526 /* Debug */,
+				826A9C661A0C916D00AAA526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		826A9C671A0C916D00AAA526 /* Build configuration list for PBXNativeTarget "ShapesGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				826A9C681A0C916D00AAA526 /* Debug */,
+				826A9C691A0C916D00AAA526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 826A9C391A0C916D00AAA526 /* Project object */;
+}
