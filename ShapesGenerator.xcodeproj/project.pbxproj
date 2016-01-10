@@ -16,8 +16,13 @@
 		826A9C551A0C916D00AAA526 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826A9C531A0C916D00AAA526 /* LaunchScreen.xib */; };
 		826A9C611A0C916D00AAA526 /* ShapesGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A9C601A0C916D00AAA526 /* ShapesGeneratorTests.swift */; };
 		826A9C6F1A0C934C00AAA526 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826A9C6E1A0C934C00AAA526 /* ShapeType.swift */; };
+		82D45C191C42358F003DECA1 /* ShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C181C42358F003DECA1 /* ShapeFactory.swift */; };
+		82D45C1B1C423712003DECA1 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C1A1C423712003DECA1 /* Point.swift */; };
+		82D45C1E1C423B36003DECA1 /* ValidationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C1D1C423B36003DECA1 /* ValidationException.swift */; };
+		82D45C211C423E50003DECA1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C201C423E50003DECA1 /* Triangle.swift */; };
+		82D45C231C423FB2003DECA1 /* AShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C221C423FB2003DECA1 /* AShape.swift */; };
 		82EBAF0A1A0CA09F009D0940 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBAF091A0CA09F009D0940 /* Colors.swift */; };
-		82EBAF0C1A0D7812009D0940 /* AbstractShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBAF0B1A0D7812009D0940 /* AbstractShape.swift */; };
+		82EBAF0C1A0D7812009D0940 /* IShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBAF0B1A0D7812009D0940 /* IShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +49,13 @@
 		826A9C5F1A0C916D00AAA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826A9C601A0C916D00AAA526 /* ShapesGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesGeneratorTests.swift; sourceTree = "<group>"; };
 		826A9C6E1A0C934C00AAA526 /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
+		82D45C181C42358F003DECA1 /* ShapeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeFactory.swift; sourceTree = "<group>"; };
+		82D45C1A1C423712003DECA1 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		82D45C1D1C423B36003DECA1 /* ValidationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationException.swift; sourceTree = "<group>"; };
+		82D45C201C423E50003DECA1 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		82D45C221C423FB2003DECA1 /* AShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AShape.swift; sourceTree = "<group>"; };
 		82EBAF091A0CA09F009D0940 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		82EBAF0B1A0D7812009D0940 /* AbstractShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractShape.swift; sourceTree = "<group>"; };
+		82EBAF0B1A0D7812009D0940 /* IShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,11 +138,40 @@
 		826A9C6A1A0C919500AAA526 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				826A9C6E1A0C934C00AAA526 /* ShapeType.swift */,
-				82EBAF091A0CA09F009D0940 /* Colors.swift */,
-				82EBAF0B1A0D7812009D0940 /* AbstractShape.swift */,
+				82D45C1F1C423E2B003DECA1 /* domain */,
+				82D45C1C1C423B0B003DECA1 /* Exception */,
+				82D45C171C423575003DECA1 /* Factory */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		82D45C171C423575003DECA1 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				82D45C181C42358F003DECA1 /* ShapeFactory.swift */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		82D45C1C1C423B0B003DECA1 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				82D45C1D1C423B36003DECA1 /* ValidationException.swift */,
+			);
+			name = Exception;
+			sourceTree = "<group>";
+		};
+		82D45C1F1C423E2B003DECA1 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				826A9C6E1A0C934C00AAA526 /* ShapeType.swift */,
+				82D45C1A1C423712003DECA1 /* Point.swift */,
+				82EBAF091A0CA09F009D0940 /* Colors.swift */,
+				82EBAF0B1A0D7812009D0940 /* IShape.swift */,
+				82D45C201C423E50003DECA1 /* Triangle.swift */,
+				82D45C221C423FB2003DECA1 /* AShape.swift */,
+			);
+			name = domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +218,7 @@
 		826A9C391A0C916D00AAA526 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Mad Hat Productions";
 				TargetAttributes = {
@@ -237,10 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D45C191C42358F003DECA1 /* ShapeFactory.swift in Sources */,
 				826A9C4D1A0C916D00AAA526 /* GameViewController.swift in Sources */,
 				82EBAF0A1A0CA09F009D0940 /* Colors.swift in Sources */,
-				82EBAF0C1A0D7812009D0940 /* AbstractShape.swift in Sources */,
+				82D45C211C423E50003DECA1 /* Triangle.swift in Sources */,
+				82EBAF0C1A0D7812009D0940 /* IShape.swift in Sources */,
+				82D45C231C423FB2003DECA1 /* AShape.swift in Sources */,
+				82D45C1B1C423712003DECA1 /* Point.swift in Sources */,
 				826A9C6F1A0C934C00AAA526 /* ShapeType.swift in Sources */,
+				82D45C1E1C423B36003DECA1 /* ValidationException.swift in Sources */,
 				826A9C471A0C916D00AAA526 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
