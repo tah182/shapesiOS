@@ -7,27 +7,42 @@
 //
 
 import Foundation
-class AShape {
-    var internalPoints      : [Point]
-    var externalPoints      : [Point]
-    var moveSpeed           : Int;
-    var rotationSpeed       : Int;
+public class AShape {
+    private let type                    : ShapeType;
+    private var internalPoints          : [Point];
+    private var externalPoints          : [Point];
+    private var moveSpeed               : Int;
+    private var rotationSpeed           : Int;
     
-    init() {
-        self.moveSpeed = Int(arc4random_uniform(10)  + 1);
-        self.rotationSpeed = Int(arc4random_uniform(10));
+    public convenience init(type: ShapeType) {
+        let moveSpeed = Int(arc4random_uniform(10)  + 1);
+        let rotationSpeed = Int(arc4random_uniform(10));
+        
+        self.init(type: type, moveSpeed: moveSpeed, rotationSpeed: rotationSpeed);
     }
     
-    init(moveSpeed: Int, rotationSpeed: Int) {
+    public init(type: ShapeType, moveSpeed: Int, rotationSpeed: Int) {
+        self.externalPoints = [Point]();
+        self.internalPoints = [Point]();
+        
         self.moveSpeed = moveSpeed;
         self.rotationSpeed = rotationSpeed;
+        self.type = type;
+        
+        for _ in 0..<type.getInnerPoints() {
+            self.internalPoints.append(Point());
+        }
+        
+        for _ in 0..<type.getOuterPoints() {
+            self.externalPoints.append(Point());
+        }
     }
     
-    func speedUp() {
+    public func speedUp() {
         self.moveSpeed *= 2;
     }
     
-    func slowDown() {
+    public func slowDown() {
         self.moveSpeed /= 2;
     }
     
@@ -37,18 +52,26 @@ class AShape {
                    > 0 if the shape is rotating clockwise
                      0 if the shape is not rotating
     */
-    var Rotation : Int {
+    public var Rotation : Int {
         get { return self.rotationSpeed; }
     }
     
     /**
         Reverses the rotation of the Shape
     */
-    func reverse() {
+    public func reverse() {
         self.rotationSpeed *= -1;
     }
     
-    func move() {
+    public func move() {
         
+    }
+    
+    public var Type : ShapeType {
+        get { return self.type; }
+    }
+    
+    public var Name : String {
+        get { return self.type.name; }
     }
 }

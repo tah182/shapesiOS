@@ -7,12 +7,7 @@
 //
 
 import Foundation
-class Triangle : AShape, IShape {
-    var points : [Point]
-    
-    init() {
-        
-    }
-    
+public class Shape : AShape, IShape {
+    // IS THIS CLASS EVEN NECESSARY
     
 }
