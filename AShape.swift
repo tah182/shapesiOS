@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public class AShape {
+public class AShape : NSObject {
     private let type                    : ShapeType;
     private var internalPoints          : [Point];
     private var externalPoints          : [Point];
@@ -15,7 +15,7 @@ public class AShape {
     private var rotationSpeed           : Int;
     
     public convenience init(type: ShapeType) {
-        let moveSpeed = Int(arc4random_uniform(10)  + 1);
+        let moveSpeed = Int(arc4random_uniform(10) + 1);
         let rotationSpeed = Int(arc4random_uniform(10));
         
         self.init(type: type, moveSpeed: moveSpeed, rotationSpeed: rotationSpeed);
@@ -38,12 +38,24 @@ public class AShape {
         }
     }
     
-    public func speedUp() {
+    public func speedUp() -> AShape {
         self.moveSpeed *= 2;
+        return self;
     }
     
-    public func slowDown() {
+    public func slowDown() -> AShape {
         self.moveSpeed /= 2;
+        return self;
+    }
+    
+    public func spinFaster() -> AShape {
+        self.rotationSpeed *= 2;
+        return self;
+    }
+    
+    public func spinSlower() -> AShape {
+        self.rotationSpeed /= 2;
+        return self;
     }
     
     /**
@@ -73,5 +85,11 @@ public class AShape {
     
     public var Name : String {
         get { return self.type.name; }
+    }
+    
+    override public func isEqual(object: AnyObject?) -> Bool {
+        if object is AShape {
+            return self.type.name == (object as! ShapeType).name;
+        } else { return false; }
     }
 }

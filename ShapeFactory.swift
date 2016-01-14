@@ -8,8 +8,7 @@
 
 import Foundation
 class ShapeFactory {
-    func createShape(ShapeType type) -> IShape {
+    func createShape(type: ShapeType) throws -> IShape {
         throw ValidationException.UnimplementedException;
-        return null;
     }
 }

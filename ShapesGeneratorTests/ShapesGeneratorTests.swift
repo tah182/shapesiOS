@@ -8,8 +8,11 @@
 
 import UIKit
 import XCTest
+@testable import ShapesGenerator;
 
 class ShapesGeneratorTests: XCTestCase {
+    var triangle : AShape = AShape(type: ShapeType.TRIANGLE);
+    
     
     override func setUp() {
         super.setUp()
@@ -21,9 +24,15 @@ class ShapesGeneratorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testShapeRotation() {
+        let rotation = triangle.Rotation;
+        XCTAssertEqual(rotation, triangle.Rotation);
+        
+        triangle.reverse();
+        XCTAssertEqual(rotation * -1, triangle.Rotation);
+        
+        triangle.spinFaster().spinFaster();
+        XCTAssertEqual(rotation * -4, triangle.Rotation);
     }
     
     func testPerformanceExample() {
