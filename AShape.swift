@@ -7,12 +7,13 @@
 //
 
 import Foundation
-public class AShape : NSObject {
+public class AShape : NSObject, IShape {
     private let type                    : ShapeType;
     private var internalPoints          : [Point];
     private var externalPoints          : [Point];
     private var moveSpeed               : Int;
     private var rotationSpeed           : Int;
+    private let diameter                : Int;
     
     public convenience init(type: ShapeType) {
         let moveSpeed = Int(arc4random_uniform(10) + 1);
@@ -21,13 +22,23 @@ public class AShape : NSObject {
         self.init(type: type, moveSpeed: moveSpeed, rotationSpeed: rotationSpeed);
     }
     
-    public init(type: ShapeType, moveSpeed: Int, rotationSpeed: Int) {
+    public convenience init(type: ShapeType, moveSpeed: Int, rotationSpeed: Int) {
+        self.init(type: type, moveSpeed: moveSpeed, rotationSpeed: rotationSpeed, initialPoint: Point());
+    }
+    
+    public convenience init(type: ShapeType, moveSpeed: Int, rotationSpeed: Int, initialPoint: Point) {
+        let d = Int(arc4random_uniform(20) + 5);
+        self.init(type: type, moveSpeed: moveSpeed, rotationSpeed: rotationSpeed, initialPoint: Point(), diameter: d);
+    }
+    
+    public init(type: ShapeType, moveSpeed: Int, rotationSpeed: Int, initialPoint: Point, diameter: Int) {
         self.externalPoints = [Point]();
         self.internalPoints = [Point]();
         
         self.moveSpeed = moveSpeed;
         self.rotationSpeed = rotationSpeed;
         self.type = type;
+        self.diameter = diameter;
         
         for _ in 0..<type.InnerPointCount {
             self.internalPoints.append(Point());
@@ -38,22 +49,30 @@ public class AShape : NSObject {
         }
     }
     
-    public func speedUp() -> AShape {
+    public var InnerPointsArray : [Point] {
+        get { return self.internalPoints; }
+    }
+    
+    public var OuterPointsArray : [Point] {
+        get { return self.externalPoints; }
+    }
+    
+    public func speedUp() -> IShape {
         self.moveSpeed *= 2;
         return self;
     }
     
-    public func slowDown() -> AShape {
+    public func slowDown() -> IShape {
         self.moveSpeed /= 2;
         return self;
     }
     
-    public func spinFaster() -> AShape {
+    public func spinFaster() -> IShape {
         self.rotationSpeed *= 2;
         return self;
     }
     
-    public func spinSlower() -> AShape {
+    public func spinSlower() -> IShape {
         self.rotationSpeed /= 2;
         return self;
     }
@@ -71,12 +90,14 @@ public class AShape : NSObject {
     /**
         Reverses the rotation of the Shape
     */
-    public func reverse() {
+    public func reverse() -> IShape {
         self.rotationSpeed *= -1;
+        return self;
     }
     
-    public func move() {
+    public func move() -> IShape {
         
+        return self;
     }
     
     public var Type : ShapeType {

@@ -19,7 +19,6 @@
 		82D45C191C42358F003DECA1 /* ShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C181C42358F003DECA1 /* ShapeFactory.swift */; };
 		82D45C1B1C423712003DECA1 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C1A1C423712003DECA1 /* Point.swift */; };
 		82D45C1E1C423B36003DECA1 /* ValidationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C1D1C423B36003DECA1 /* ValidationException.swift */; };
-		82D45C211C423E50003DECA1 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C201C423E50003DECA1 /* Shape.swift */; };
 		82D45C231C423FB2003DECA1 /* AShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D45C221C423FB2003DECA1 /* AShape.swift */; };
 		82EBAF0A1A0CA09F009D0940 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBAF091A0CA09F009D0940 /* Colors.swift */; };
 		82EBAF0C1A0D7812009D0940 /* IShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBAF0B1A0D7812009D0940 /* IShape.swift */; };
@@ -52,7 +51,6 @@
 		82D45C181C42358F003DECA1 /* ShapeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeFactory.swift; sourceTree = "<group>"; };
 		82D45C1A1C423712003DECA1 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		82D45C1D1C423B36003DECA1 /* ValidationException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationException.swift; sourceTree = "<group>"; };
-		82D45C201C423E50003DECA1 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		82D45C221C423FB2003DECA1 /* AShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AShape.swift; sourceTree = "<group>"; };
 		82EBAF091A0CA09F009D0940 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		82EBAF0B1A0D7812009D0940 /* IShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IShape.swift; sourceTree = "<group>"; };
@@ -76,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824102071C4A27020044B490 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				82D45C171C423575003DECA1 /* Factory */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
 		826A9C381A0C916D00AAA526 = {
 			isa = PBXGroup;
 			children = (
@@ -139,9 +145,9 @@
 		826A9C6A1A0C919500AAA526 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				82D45C1F1C423E2B003DECA1 /* domain */,
+				824102071C4A27020044B490 /* Business */,
+				82D45C1F1C423E2B003DECA1 /* Domain */,
 				82D45C1C1C423B0B003DECA1 /* Exception */,
-				82D45C171C423575003DECA1 /* Factory */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -162,17 +168,16 @@
 			name = Exception;
 			sourceTree = "<group>";
 		};
-		82D45C1F1C423E2B003DECA1 /* domain */ = {
+		82D45C1F1C423E2B003DECA1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				826A9C6E1A0C934C00AAA526 /* ShapeType.swift */,
 				82D45C1A1C423712003DECA1 /* Point.swift */,
 				82EBAF091A0CA09F009D0940 /* Colors.swift */,
 				82EBAF0B1A0D7812009D0940 /* IShape.swift */,
-				82D45C201C423E50003DECA1 /* Shape.swift */,
 				82D45C221C423FB2003DECA1 /* AShape.swift */,
 			);
-			name = domain;
+			name = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +287,6 @@
 				82D45C191C42358F003DECA1 /* ShapeFactory.swift in Sources */,
 				826A9C4D1A0C916D00AAA526 /* GameViewController.swift in Sources */,
 				82EBAF0A1A0CA09F009D0940 /* Colors.swift in Sources */,
-				82D45C211C423E50003DECA1 /* Shape.swift in Sources */,
 				82EBAF0C1A0D7812009D0940 /* IShape.swift in Sources */,
 				82D45C231C423FB2003DECA1 /* AShape.swift in Sources */,
 				82D45C1B1C423712003DECA1 /* Point.swift in Sources */,

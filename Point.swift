@@ -9,7 +9,7 @@
 //
 
 import Foundation
-struct Point {
+public struct Point {
     var x : Double;
     var y : Double;
     
@@ -18,7 +18,7 @@ struct Point {
      - x: the original x position for the object
      - y: the original y position for the object
      */
-    init(x : Double, y : Double) {
+    public init(x : Double, y : Double) {
         self.x = x;
         self.y = y;
     }
@@ -26,7 +26,7 @@ struct Point {
     /**
      Empty Constructor setting the point to 0,0
      */
-    init() {
+    public init() {
         self.x = 0.0;
         self.y = 0.0;
     }
@@ -36,35 +36,39 @@ struct Point {
         - x: if x < 0, the point will move to the left, 
              if x > 0, the point will move to the right
     */
-    mutating func moveHorizontal(x : Double) {
+    public mutating func moveHorizontal(x : Double) {
         self.x += x;
     }
     
-    mutating func moveVertical(y : Double) {
+    public mutating func moveVertical(y : Double) {
         self.y += x;
     }
     
-    mutating func moveLeft(x : Double) {
+    public mutating func moveLeft(x : Double) {
         moveHorizontal(abs(x) * -1);
     }
     
-    mutating func moveRight(x : Double) {
+    public mutating func moveRight(x : Double) {
         moveHorizontal(abs(x));
     }
     
-    mutating func moveUp(y : Double) {
+    public mutating func moveUp(y : Double) {
         moveVertical(abs(y));
     }
     
-    mutating func moveDown(y : Double) {
+    public mutating func moveDown(y : Double) {
         moveVertical(abs(y) * -1);
     }
 
-    var X : Double {
+    public var X : Double {
         get { return self.x; }
     }
     
-    var Y : Double {
+    public var Y : Double {
         get { return self.y; }
+    }
+    
+    public func isEqual(point: Point) -> Bool {
+        return self.Y == point.Y && self.X == point.X;
     }
 }

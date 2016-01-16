@@ -12,7 +12,9 @@ import XCTest
 
 class TriangleShapesGeneratorTests : XCTestCase {
     let testName = "Triangle";
-    var triangle : AShape = AShape(type: ShapeType.TRIANGLE);
+    let innerPointCount = 0;
+    let outerPointCount = 3;
+    let triangle : IShape = AShape(type: ShapeType.TRIANGLE);
     
     
     override func setUp() {
@@ -35,6 +37,23 @@ class TriangleShapesGeneratorTests : XCTestCase {
         triangle.spinFaster().spinFaster();
         XCTAssertEqual(rotation * -4, triangle.Rotation);
         
+    }
+    
+    func testPointCount() {
+        XCTAssertEqual(innerPointCount, triangle.InnerPointsArray.count);
+        XCTAssertEqual(outerPointCount, triangle.OuterPointsArray.count);
+    }
+    
+    func testShapePoints() {
+        let zeroPointIndex : [Point] = [ Point(), Point(), Point() ];
+        
+        for _point in 0..<zeroPointIndex.count {
+            XCTAssert(zeroPointIndex[_point].isEqual(triangle.OuterPointsArray[_point]));
+        }
+    }
+    
+    func testMove() {
+        XCTFail("Not Implemented");
     }
     
     func testShapeName() {

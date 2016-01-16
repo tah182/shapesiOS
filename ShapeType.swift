@@ -14,7 +14,7 @@ public enum ShapeType : String {
     case OCTAGON    = "Octagon";
     case STAR       = "Star";
     
-    var InnerPointCount : Int {
+    var OuterPointCount : Int {
         var outerPoints = 0;
         switch self {
             case .CIRCLE:
@@ -35,7 +35,7 @@ public enum ShapeType : String {
         return outerPoints;
     }
     
-    var OuterPointCount : Int {
+    var InnerPointCount : Int {
         var innerPoints = 0;
         switch self {
             case .CIRCLE:
