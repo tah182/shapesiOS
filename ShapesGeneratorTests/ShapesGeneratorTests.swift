@@ -10,7 +10,8 @@ import UIKit
 import XCTest
 @testable import ShapesGenerator;
 
-class ShapesGeneratorTests: XCTestCase {
+class TriangleShapesGeneratorTests : XCTestCase {
+    let testName = "Triangle";
     var triangle : AShape = AShape(type: ShapeType.TRIANGLE);
     
     
@@ -33,6 +34,11 @@ class ShapesGeneratorTests: XCTestCase {
         
         triangle.spinFaster().spinFaster();
         XCTAssertEqual(rotation * -4, triangle.Rotation);
+        
+    }
+    
+    func testShapeName() {
+        XCTAssertEqual(testName, triangle.Name);
     }
     
     func testPerformanceExample() {

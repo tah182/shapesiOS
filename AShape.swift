@@ -29,11 +29,11 @@ public class AShape : NSObject {
         self.rotationSpeed = rotationSpeed;
         self.type = type;
         
-        for _ in 0..<type.getInnerPoints() {
+        for _ in 0..<type.InnerPointCount {
             self.internalPoints.append(Point());
         }
         
-        for _ in 0..<type.getOuterPoints() {
+        for _ in 0..<type.OuterPointCount {
             self.externalPoints.append(Point());
         }
     }

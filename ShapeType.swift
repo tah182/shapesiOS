@@ -14,53 +14,54 @@ public enum ShapeType : String {
     case OCTAGON    = "Octagon";
     case STAR       = "Star";
     
-    var InnerPoints : Int {
-        get { return self.getInnerPoints(); }
+    var InnerPointCount : Int {
+        var outerPoints = 0;
+        switch self {
+            case .CIRCLE:
+                outerPoints = 360;
+            case .TRIANGLE:
+                outerPoints = 3;
+            case .SQUARE:
+                outerPoints = 4;
+            case .PENTAGON:
+                outerPoints = 5;
+            case .HEXAGON:
+                outerPoints = 6;
+            case .OCTAGON:
+                outerPoints = 8;
+            case .STAR:
+                outerPoints = 5;
+        }
+        return outerPoints;
     }
     
-    var OuterPoints : Int {
-        get { return self.getOuterPoints(); }
+    var OuterPointCount : Int {
+        var innerPoints = 0;
+        switch self {
+            case .CIRCLE:
+                fallthrough
+            case .TRIANGLE:
+                fallthrough
+            case .SQUARE:
+                fallthrough
+            case .PENTAGON:
+                fallthrough
+            case .HEXAGON:
+                fallthrough
+            case .OCTAGON:
+                innerPoints = 0;
+            case .STAR:
+                innerPoints = 5;
+        }
+        return innerPoints;
+
+    }
+
+    var PTPDiameter : Bool {
+        return InnerPointCount % 2 == 0;
     }
     
     var name : String {
         return self.rawValue;
-    }
-    
-    func getInnerPoints() -> Int {
-        switch self {
-            case .CIRCLE:
-                fallthrough
-            case .TRIANGLE:
-                fallthrough
-            case .SQUARE:
-                fallthrough
-            case .PENTAGON:
-                fallthrough
-            case .HEXAGON:
-                fallthrough
-            case .OCTAGON:
-                return 0;
-            case .STAR:
-                return 5;
-        }
-    }
-    
-    func getOuterPoints() -> Int {
-        switch self {
-            case .CIRCLE:
-                return 360;
-            case .TRIANGLE:
-                return 3;
-            case .SQUARE:
-                return 4;
-            case .PENTAGON:
-                return 5;
-            case .HEXAGON:
-                return 6;
-            case .OCTAGON:
-                return 8;
-            case .STAR:
-                return 5;
-        }
     }
 }
