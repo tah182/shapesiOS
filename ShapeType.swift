@@ -5,14 +5,20 @@
 //  Created by Tah Tatsumoto on 11/6/14.
 //  Copyright (c) 2014 Mad Hat Productions. All rights reserved.
 //
-public enum ShapeType : String {
-    case CIRCLE     = "Circle";
-    case TRIANGLE   = "Triangle";
-    case SQUARE     = "Square";
-    case PENTAGON   = "Pentagon";
-    case HEXAGON    = "Hexagon";
-    case OCTAGON    = "Octagon";
-    case STAR       = "Star";
+import Foundation
+public enum ShapeType : Int {
+    case CIRCLE;
+    case TRIANGLE;
+    case SQUARE;
+    case PENTAGON;
+    case HEXAGON;
+    case OCTAGON;
+    case STAR;
+    
+    var name : String {
+        let names : [String] = ["Circle", "Triangle", "Square", "Square", "Pentagon", "Hexagon", "Octagon", "Star"];
+        return names[self.rawValue];
+    }
     
     var OuterPointCount : Int {
         var outerPoints = 0;
@@ -57,11 +63,22 @@ public enum ShapeType : String {
 
     }
 
+    /** 
+     Returns if the given shape has an even amount of vertices/points
+    */
     var PTPDiameter : Bool {
         return InnerPointCount % 2 == 0;
     }
     
-    var name : String {
-        return self.rawValue;
+    private static let _count: ShapeType.RawValue = {
+        // find the maximum enum value
+        var maxValue: Int = 0;
+        while let _ = ShapeType(rawValue: ++maxValue) { }
+        return maxValue;
+    }();
+    
+    static func Random() -> ShapeType {
+        let rand = Int(arc4random_uniform(UInt32(_count)));
+        return ShapeType(rawValue: rand)!;
     }
 }

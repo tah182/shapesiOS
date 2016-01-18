@@ -23,11 +23,12 @@ public class AShape : NSObject, IShape {
     }
     
     public convenience init(type: ShapeType, moveSpeed: Int, rotationSpeed: Int) {
-        self.init(type: type, moveSpeed: moveSpeed, rotationSpeed: rotationSpeed, initialPoint: Point());
+        let pt = Point();
+        self.init(type: type, moveSpeed: moveSpeed, rotationSpeed: rotationSpeed, initialPoint: pt);
     }
     
     public convenience init(type: ShapeType, moveSpeed: Int, rotationSpeed: Int, initialPoint: Point) {
-        let d = Int(arc4random_uniform(20) + 5);
+        let d = Int(arc4random_uniform(50) + 10);
         self.init(type: type, moveSpeed: moveSpeed, rotationSpeed: rotationSpeed, initialPoint: Point(), diameter: d);
     }
     
@@ -40,13 +41,19 @@ public class AShape : NSObject, IShape {
         self.type = type;
         self.diameter = diameter;
         
-        for _ in 0..<type.InnerPointCount {
+        self.internalPoints.append(initialPoint);
+        
+        for _ in 0..<type.InnerPointCount - 1 {
             self.internalPoints.append(Point());
         }
         
         for _ in 0..<type.OuterPointCount {
             self.externalPoints.append(Point());
         }
+    }
+    
+    private func createPoints(pointNum: Int, maxPoint: Int) {
+        
     }
     
     public var InnerPointsArray : [Point] {
