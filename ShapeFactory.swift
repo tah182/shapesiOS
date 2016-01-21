@@ -17,26 +17,26 @@ public class ShapeFactory {
     }
     
     public static func createTriange() -> IShape {
-        return AShape(type: ShapeType.TRIANGLE);
+        return createShape(ShapeType.TRIANGLE);
     }
     
     public static func createSquare() -> IShape {
-        return AShape(type: ShapeType.SQUARE);
+        return createShape(ShapeType.SQUARE);
     }
     
     public static func createPentagon() -> IShape {
-        return AShape(type: ShapeType.PENTAGON);
+        return createShape(ShapeType.PENTAGON);
     }
     
     public static func createHexagon() -> IShape {
-        return AShape(type: ShapeType.HEXAGON);
+        return createShape(ShapeType.HEXAGON);
     }
     
     public static func createOctagon() -> IShape {
-        return AShape(type: ShapeType.OCTAGON);
+        return createShape(ShapeType.OCTAGON);
     }
     
     public static func createCircle() -> IShape {
-        return AShape(type: ShapeType.CIRCLE);
+        return createShape(ShapeType.CIRCLE);
     }
 }

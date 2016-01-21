@@ -9,8 +9,8 @@
 import Foundation
 public class AShape : NSObject, IShape {
     private let type                    : ShapeType;
-    private var internalPoints          : [Point];
-    private var externalPoints          : [Point];
+    private var internalPoints          : [Point]!;
+    private var externalPoints          : [Point]!;
     private var moveSpeed               : Int;
     private var rotationSpeed           : Int;
     private let diameter                : Int;
@@ -33,27 +33,33 @@ public class AShape : NSObject, IShape {
     }
     
     public init(type: ShapeType, moveSpeed: Int, rotationSpeed: Int, initialPoint: Point, diameter: Int) {
-        self.externalPoints = [Point]();
-        self.internalPoints = [Point]();
         
         self.moveSpeed = moveSpeed;
         self.rotationSpeed = rotationSpeed;
         self.type = type;
         self.diameter = diameter;
         
-        self.internalPoints.append(initialPoint);
-        
-        for _ in 0..<type.InnerPointCount - 1 {
-            self.internalPoints.append(Point());
-        }
-        
-        for _ in 0..<type.OuterPointCount {
-            self.externalPoints.append(Point());
-        }
+        super.init();
+        self.externalPoints = createExternalPoints(initialPoint);
+        self.internalPoints = createInternalPoints();
     }
     
-    private func createPoints(pointNum: Int, maxPoint: Int) {
-        
+    private func createExternalPoints(initialPoint: Point) -> [Point] {
+        var points : [Point] = [Point]();
+        for _ in 1..<type.OuterPointCount {
+            // Must update
+            points.append(Point());
+        }
+        return points;
+    }
+    
+    private func createInternalPoints() -> [Point] {
+        var points : [Point] = [Point]();
+        for _ in 0..<type.InnerPointCount {
+            // Must update;
+            points.append(Point());
+        }
+        return points;
     }
     
     public var InnerPointsArray : [Point] {
